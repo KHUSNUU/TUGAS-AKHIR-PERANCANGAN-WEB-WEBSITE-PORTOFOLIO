@@ -1,0 +1,870 @@
+/***************************
+BASE CONFIGURATION
+***************************/
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/Universitas-Semarang.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #5a5a5a;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+footer {
+    background-color: #3d6ffa;  /* Warna latar belakang footer */
+    color: white;             /* Warna teks footer */
+    text-align: center;       /* Memusatkan teks di dalam footer */
+    padding: 20px;            /* Memberikan padding di sekitar footer */
+    margin-top: 30px;         /* Memberikan jarak antara footer dan elemen di atasnya */
+}
+
+footer p {
+    margin: 0;                /* Menghapus margin default pada paragraf */
+    font-size: 16px;          /* Menentukan ukuran font */
+}
+
+
+
+/***************************
+NAVBAR
+***************************/
+
+nav {
+    background-color: #3d6ffa;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    min-height: 80px;
+    overflow: hidden;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 80px;
+    float: right;
+}
+
+nav ul {
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+    align-items: center;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 80%; /* Lebar responsif berdasarkan persentase */
+    max-width: 700px; /* Ukuran maksimal agar tetap proporsional */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f7fff7;
+    text-align: center; /* Sentralisasi teks */
+    padding: 20px; /* Memberikan ruang sekitar teks */
+    box-sizing: border-box; /* Agar padding masuk dalam perhitungan ukuran */
+}
+
+@media (max-width: 1024px) {
+    .hero-text-box {
+        width: 85%; /* Lebar sedikit lebih besar pada tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text-box {
+        width: 90%; /* Menggunakan 90% lebar container pada layar kecil */
+        padding: 15px; /* Mengurangi padding pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text-box {
+        width: 95%; /* Memperbesar lebar pada ponsel */
+        padding: 10px; /* Mengurangi padding untuk tampilan lebih padat */
+        font-size: 16px; /* Menyesuaikan ukuran font agar lebih mudah dibaca di ponsel */
+    }
+}
+
+/***************************
+Profile
+***************************/
+
+.profile header {
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.profile a {
+    text-decoration: none;
+}
+
+.profile a:link,
+.profile a:visited,
+input[type=submit] {
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    color: 0.2s;
+    border: 0.2s;
+    color: #000;
+}
+
+.profile a:hover,
+.profile a:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    color: #3d6ffa;
+}
+
+.profile-text {
+    text-align: center;
+    font-size: 22px;
+}
+
+.sidebar {
+    display: inline;
+}
+
+
+/***************************
+CONTENT
+***************************/
+
+.featured-image {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#content {
+    float: left;
+    width: 75%;
+    text-align: justify;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.detail {
+    font-size: 20px;
+    text-align: center; /* Menyentralkan teks */
+    line-height: 1.6; /* Menjaga jarak antar baris untuk keterbacaan yang lebih baik */
+    margin: 0 auto; /* Menyentralkan elemen secara horizontal jika ada kontainer */
+    max-width: 80%; /* Menentukan lebar maksimum agar teks tidak terlalu lebar */
+}
+
+/* Responsif - Menyesuaikan ukuran font pada layar kecil */
+@media (max-width: 768px) {
+    .detail {
+        font-size: 18px; /* Mengurangi ukuran font pada layar kecil agar lebih nyaman dibaca */
+        max-width: 90%; /* Menambah lebar kontainer di layar kecil agar teks lebih mudah dibaca */
+    }
+}
+
+
+
+/***************************
+BUTTON
+***************************/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    justify-content: center; /* Pusatkan tombol secara horizontal */
+    align-items: center; /* Pusatkan tombol secara vertikal */
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    align-self: center;
+    border-radius: 200px;
+    transition: background-color 0.2s;
+    color: 0.2s;
+    border: 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #3d6ffa;
+    border: 1px solid #3d6ffa;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #3d6ffa;
+    color: #3d6ffa;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #3d6ffa;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #3d6ffa;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #3d6ffa;
+    color: #fff;
+}
+
+
+/***************************
+TABLE
+***************************/
+
+table th {
+    text-align: left;
+    font-size: 17px;
+}
+
+table tr {
+    text-align: left;
+    font-size: 17px;
+}
+
+
+/***************************
+PENGHARGAAN
+***************************/
+
+.penghargaan {
+    list-style: none;
+    width: 100%;
+}
+
+.penghargaan li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.penghargaan-photo-small {
+    width: 100%;
+    max-height: 170px;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.penghargaan-photo-big {
+    width: 100%;
+    max-height: 200px;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.penghargaan-photo-small img {
+    opacity: 0.8;
+    width: 100%;
+    height: auto;
+    transform: scale(1.03);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.penghargaan-photo-big img {
+    opacity: 0.8;
+    width: 100%;
+    height: auto;
+    transform: scale(1.03);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.penghargaan-photo-small img:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.penghargaan-photo-big img:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/***************************
+SLIDESHOW
+***************************/
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #3d6ffa;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #000;
+    font-size: 17px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, textarea, button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Gaya umum */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #3d6ffa;
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: #3d6ffa;
+    margin-bottom: 20px;
+}
+
+
+/* Gaya form */
+form {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3d6ffa;
+    box-shadow: 0 0 5px rgba(61, 111, 250, 0.5);
+}
+
+button {
+    background-color: #3d6ffa;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #335bcc;
+}
+
+/* Gaya output */
+.output {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #e8f0fe;
+    border: 1px solid #3d6ffa;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.output h3 {
+    color: #3d6ffa;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.output p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.output strong {
+    color: #333;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    form, .output {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/***************************
+RESPONSIVE DESIGN
+***************************/
+
+/* Responsif untuk perangkat dengan lebar kurang dari 768px (tablet dan perangkat kecil) */
+@media (max-width: 768px) {
+    /* Navbar */
+    nav {
+        padding: 10px;
+    }
+    nav li {
+        margin-right: 10px;
+    }
+    nav a {
+        font-size: 16px;
+    }
+
+    /* Profile */
+    .profile img {
+        width: 100%; /* Menyesuaikan gambar di profile */
+        height: auto; /* Agar gambar tidak terdistorsi */
+    }
+
+    .profile-text {
+        font-size: 18px; /* Mengurangi ukuran font profile */
+        padding: 0 10px; /* Memberikan padding agar teks tidak terlalu rapat dengan tepi */
+    }
+
+    /* Hero text box */
+    .hero-text-box {
+        font-size: 20px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 15px; /* Menambah padding agar teks tidak menyentuh tepi */
+    }
+
+    /* Content */
+    #content {
+        width: 100%;
+        padding: 10px;
+        float: none;
+    }
+
+    aside {
+        width: 100%;
+        padding-left: 0;
+        float: none;
+    }
+
+/***************************
+RIWAYAT PENDIDIKAN
+***************************/
+
+.riwayat-pendidikan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.riwayat-pendidikan div {
+    width: 48%; /* Memberikan sedikit ruang antar elemen */
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.riwayat-pendidikan h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3d6ffa;
+}
+
+.riwayat-pendidikan p {
+    font-size: 16px;
+    line-height: 1.6; /* Menjaga jarak antar baris agar teks lebih mudah dibaca */
+    color: #555;
+}
+
+/* Responsif: Mengatur tampilan pada layar kecil */
+@media (max-width: 768px) {
+    .riwayat-pendidikan div {
+        width: 100%; /* Membuat elemen menempati seluruh lebar di layar kecil */
+    }
+}
+
+
+    .featured-image {
+        width: 100%; /* Menyesuaikan gambar agar tidak melebihi lebar kontainer */
+        height: auto; /* Menjaga rasio gambar */
+    }
+
+    /* Formulir */
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Button */
+    .btn,
+    input[type=submit] {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Responsif untuk perangkat dengan lebar kurang dari 480px (ponsel kecil) */
+@media (max-width: 480px) {
+    /* Navbar */
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Hero text box */
+    .hero-text-box {
+        font-size: 18px;
+        padding: 0 10px; /* Memberikan ruang di sekitar teks */
+    }
+
+    /* Profile */
+    .profile img {
+        width: 100%; /* Menyesuaikan gambar pada profile */
+        height: auto; /* Agar gambar tidak terdistorsi */
+    }
+
+/***************************
+TENTANG 
+***************************/
+
+.riwayat-pendidikan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.riwayat-pendidikan div {
+    width: 48%; /* Memberikan sedikit ruang antar elemen */
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.riwayat-pendidikan h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3d6ffa;
+}
+
+.riwayat-pendidikan p {
+    font-size: 16px;
+    line-height: 1.6; /* Menjaga jarak antar baris agar teks lebih mudah dibaca */
+    color: #555;
+}
+
+/* Responsif: Mengatur tampilan pada layar kecil */
+@media (max-width: 768px) {
+    .riwayat-pendidikan div {
+        width: 100%; /* Membuat elemen menempati seluruh lebar di layar kecil */
+    }
+}
+
+
+    /* Content */
+    #content {
+        padding: 5px;
+        float: none;
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        padding-left: 0;
+        float: none;
+    }
+
+    /* Formulir */
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Button */
+    .btn,
+    input[type=submit] {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+/***************************
+PENGHARGAAN
+***************************/
+
+.penghargaan {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen dapat dipindahkan ke baris baru saat perlu */
+    justify-content: space-between; /* Menyebarkan gambar secara merata */
+}
+
+.penghargaan li {
+    display: flex;
+    justify-content: center; /* Memastikan gambar di dalam li terpusat secara horizontal */
+    align-items: center; /* Memastikan gambar terpusat secara vertikal */
+    width: 48%; /* Mengatur lebar elemen li agar bisa muat dua gambar per baris */
+    margin-bottom: 10px; /* Memberikan jarak antar gambar */
+}
+
+.penghargaan-photo-small,
+.penghargaan-photo-big {
+    width: 100%; /* Mengatur gambar agar memenuhi lebar kontainer */
+    max-height: 200px; /* Mengatur batasan tinggi gambar */
+    background-color: #000; /* Memberikan latar belakang hitam agar gambar lebih menonjol */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Menghindari gambar meluap keluar dari kontainer */
+}
+
+.penghargaan-photo-small img,
+.penghargaan-photo-big img {
+    width: 100%; /* Gambar akan memenuhi lebar kontainer */
+    height: auto; /* Gambar tetap proporsional */
+    transform: scale(1.03); /* Sedikit memberi efek zoom */
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.8; /* Mengurangi opacity untuk efek lebih menarik */
+}
+
+.penghargaan-photo-small img:hover,
+.penghargaan-photo-big img:hover {
+    transform: scale(1.2); /* Efek zoom lebih besar saat hover */
+    opacity: 1; /* Menonaktifkan opacity pada hover */
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .penghargaan li {
+        width: 100%; /* Membuat gambar menempati seluruh lebar pada layar kecil */
+    }
+}
+
+    /* Slideshow */
+    .slideshow-container {
+        width: 100%; /* Pastikan slideshow juga menyesuaikan ukuran layar */
+    }
+}
+
+/* Responsif untuk gambar di seluruh halaman */
+@media (max-width: 767px) {
+    .featured-image {
+        width: 100%;
+        height: auto; /* Menjaga agar gambar tetap proporsional */
+    }
+
+    /* Teks di konten */
+    .detail {
+        font-size: 18px; /* Mengurangi ukuran font di konten untuk perangkat kecil */
+    }
+
+    .profile-text {
+        font-size: 18px;
+        padding: 0 15px; /* Memberikan sedikit ruang di kiri dan kanan teks */
+    }
+}
